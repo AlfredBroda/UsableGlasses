@@ -1,0 +1,24 @@
+[
+    {
+        "strName": "ItmGlassesC05",
+        "strImg"  : "items/ItmGlassesC05",
+        "strImgNorm"  : "items/ItmGlassesC05N",
+        "strImgDamaged" : "",
+        "strDmgColor" : "DamageTintDefault",
+        "fZScale"  : 0.02,
+        "nCols"  : 1,
+        "aSocketAdds"    : [
+            "TILItemAdds"
+        ],
+        "aSocketForbids"    : [
+            "Blank", "Blank", "Blank",
+            "Blank", "TILItemForbids", "Blank",
+            "Blank", "Blank", "Blank"
+        ],
+        "aSocketReqs"    : [
+            "Blank", "Blank", "Blank",
+            "Blank", "Blank", "Blank",
+            "Blank", "Blank", "Blank"
+        ]
+  }
+]

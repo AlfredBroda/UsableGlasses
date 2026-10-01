@@ -1,0 +1,12 @@
+[
+  {
+    "strName": "BodyGlassesOrange",
+    "strSlotImage": "paperdoll/bodyGlassesOrange",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  }
+]

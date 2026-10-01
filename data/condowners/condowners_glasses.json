@@ -1,0 +1,48 @@
+[
+  {
+    "strName": "ItmGlassesOrange",
+    "strNameShort": "Glasses C05",
+    "strItemDef": "ItmGlassesC05",
+    "strDesc": "Orange Glasses - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses, Orange C05",
+    "strType": "Item",
+    "bSlotLocked": false,
+    "nStackLimit": 1,
+    "aInteractions": [
+      "EquipItem",
+      "DropItem",
+      "PickupItem"
+    ],
+    "aStartingConds": [
+      "IsBurnable=1.0x1.0",
+      "IsSolid=1.0x1.0",
+      "StatMass=1.0x0.1",
+      "StatBasePrice=1.0x10.0",
+      "StatDamageMax=1.0x2",
+      "StatArmorBlunt=1.0x0.2",
+      "StatArmorCut=1.0x0.2",
+      "IsNewSkin=1.0x1"
+    ],
+    "aSlotsWeHave": [],
+    "dictSlotsLayout": null,
+    "mapChargeProfiles": [
+      "Melee", "MeleeAttackDefault",
+      "Normal", "WearAndTearDefault"
+    ],
+    "aUpdateCommands": [
+      "Destructable,StatDamage,ACTClothesDestroy,StatDamageMax,1.0"
+    ],
+    "mapCondTolerance": [],
+    "mapPoints": [],
+    "mapGUIPropMaps": null,
+    "strCondLoot": null,
+    "strPortraitImg": "paperdoll/portGlassesOrange",
+    "strAudioEmitter": "ItmSmallPlasticGeneralSound",
+    "mapSlotEffects": [
+      "head_glasses", "BodyGlassesOrange",
+      "heldL", "HeldItmDefaultSoftL",
+      "heldR", "HeldItmDefaultSoftR"
+    ],
+    "jsonPI": null
+  }
+]

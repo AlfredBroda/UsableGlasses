@@ -1,0 +1,18 @@
+[
+    {
+        "strName" : "ItmGlassesA",
+        "strNameFriendly" : "Glasses, design A",
+        "strImg"  : "ItmBodyPart01",
+        "strImgNorm"  : "ItmBodyPart01",
+        "strPortraitImg"  : "paperdoll/portGlassesOrange",
+        "strCOBase"    : "ItmGlassesOrange",
+        "strCondLoot"    : null,
+        "mapSlotEffects" : [
+            "head_glasses","BodyGlassesA",
+            "heldL", "HeldItmDefaultSoftL",
+            "heldR", "HeldItmDefaultSoftR"
+        ],
+        "mapModeSwitches"    : [
+        ]
+    }
+]
