@@ -5,5 +5,29 @@
       "ItmGlassesA02=0.07x1|ItmGlassesA03=0.07x1|ItmGlassesA04=0.07x1|ItmGlassesA05=0.07x1|ItmGlassesA06=0.07x1|ItmGlassesB02=0.07x1|ItmGlassesB03=0.07x1|ItmGlassesB04=0.07x1|ItmGlassesB05=0.07x1|ItmGlassesB06=0.07x1|ItmGlassesC02=0.07x1|ItmGlassesC03=0.07x1|ItmGlassesC04=0.07x1|ItmGlassesC05=0.07x1|ItmGlassesOrange=0.07x1"
     ],
     "strType": "item"
+  },
+  {
+    "strName": "CNDOLGlasses",
+    "aCOs": [
+      "IsPolaris=1.0x1"
+    ],
+    "strType": "condition"
+  },
+  {
+    "strName": "CNDOLGlassesOrange",
+    "aCOs": [
+      "IsRenbao=1.0x1",
+      "StatBasePrice=1.0x25.0"
+    ],
+    "strType": "condition"
+  },
+  {
+    "strName": "CNDOLGlassesNovelty",
+    "aCOs": [
+      "IsMiura=1.0x1",
+      "IsCurio=1.0x1",
+      "StatBasePrice=1.0x20.0"
+    ],
+    "strType": "condition"
   }
 ]

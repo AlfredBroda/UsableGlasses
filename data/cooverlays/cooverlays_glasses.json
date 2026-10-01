@@ -2,7 +2,7 @@
   {
     "strName": "ItmGlassesA02",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern A02 - minimum protection when staring at the sun.",
+    "strDesc": "Fine dark frames with small, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: A02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA02",
@@ -22,7 +22,7 @@
   {
     "strName": "ItmGlassesA03",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern A03 - minimum protection when staring at the sun.",
+    "strDesc": "Bold black frames with broad, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: A03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA03",
@@ -42,7 +42,7 @@
   {
     "strName": "ItmGlassesA04",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern A04 - minimum protection when staring at the sun.",
+    "strDesc": "Dark brown frames with smoky, rounded lenses.",
     "strNameFriendly": "Glasses: A04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA04",
@@ -62,7 +62,7 @@
   {
     "strName": "ItmGlassesA05",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern A05 - minimum protection when staring at the sun.",
+    "strDesc": "Slim amber-tinted lenses with softly upswept outer corners.",
     "strNameFriendly": "Glasses: A05",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA05",
@@ -82,7 +82,7 @@
   {
     "strName": "ItmGlassesA06",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern A06 - minimum protection when staring at the sun.",
+    "strDesc": "Black rectangular frames with clear lenses.",
     "strNameFriendly": "Glasses: A06",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA06",
@@ -102,7 +102,7 @@
   {
     "strName": "ItmGlassesB02",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern B02 - minimum protection when staring at the sun.",
+    "strDesc": "Thin black round frames with pale lenses.",
     "strNameFriendly": "Glasses: B02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB02",
@@ -122,7 +122,7 @@
   {
     "strName": "ItmGlassesB03",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern B03 - minimum protection when staring at the sun.",
+    "strDesc": "Blue rectangular frames with pale lenses.",
     "strNameFriendly": "Glasses: B03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB03",
@@ -142,7 +142,7 @@
   {
     "strName": "ItmGlassesB04",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern B04 - minimum protection when staring at the sun.",
+    "strDesc": "Thick black frames with broad, lightly tinted lenses.",
     "strNameFriendly": "Glasses: B04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB04",
@@ -162,7 +162,7 @@
   {
     "strName": "ItmGlassesB05",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern B05 - minimum protection when staring at the sun.",
+    "strDesc": "Slim black frames with narrow rectangular lenses.",
     "strNameFriendly": "Glasses: B05",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB05",
@@ -182,13 +182,13 @@
   {
     "strName": "ItmGlassesB06",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern B06 - minimum protection when staring at the sun.",
+    "strDesc": "Bright blue novelty frames with oversized circular lenses and curling accents.",
     "strNameFriendly": "Glasses: B06",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB06",
     "strImgNorm": "items/ItmGlassesN",
     "strPortraitImg": "paperdoll/portGlassesB06",
-    "strCondLoot": "CNDOLGlasses",
+    "strCondLoot": "CNDOLGlassesNovelty",
     "mapSlotEffects": [
       "heldL",
       "HeldItmDefaultL",
@@ -202,7 +202,7 @@
   {
     "strName": "ItmGlassesC02",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern C02 - minimum protection when staring at the sun.",
+    "strDesc": "Pale translucent frames with broad, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: C02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC02",
@@ -222,7 +222,7 @@
   {
     "strName": "ItmGlassesC03",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern C03 - minimum protection when staring at the sun.",
+    "strDesc": "Black wraparound frames with dark tinted lenses.",
     "strNameFriendly": "Glasses: C03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC03",
@@ -242,7 +242,7 @@
   {
     "strName": "ItmGlassesC04",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern C04 - minimum protection when staring at the sun.",
+    "strDesc": "Bold black frames with large square lenses.",
     "strNameFriendly": "Glasses: C04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC04",
@@ -262,13 +262,13 @@
   {
     "strName": "ItmGlassesC05",
     "strNameShort": " Glasses",
-    "strDesc": "Glasses pattern C05 - minimum protection when staring at the sun.",
-    "strNameFriendly": "Glasses: C05",
+    "strDesc": "Orange wraparound visor with a grid of white illuminated dots.",
+    "strNameFriendly": "Glasses: C05 (On)",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC05",
     "strImgNorm": "items/ItmGlassesN",
     "strPortraitImg": "paperdoll/portGlassesC05",
-    "strCondLoot": "CNDOLGlasses",
+    "strCondLoot": "CNDOLGlassesOrange",
     "mapSlotEffects": [
       "heldL",
       "HeldItmDefaultL",
