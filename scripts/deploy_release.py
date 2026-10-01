@@ -102,6 +102,10 @@ def deploy(
         )
         return package_dir
 
+    if package_dir.exists():
+        print(f"Removing existing package directory: {package_dir}")
+        shutil.rmtree(package_dir)
+
     plugins_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(metadata_path, package_dir / "mod_info.json")
     shutil.copy2(source, destination)

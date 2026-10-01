@@ -1,7 +1,147 @@
 [
   {
     "strName": "BodyGlassesOrange",
-    "strSlotImage": "paperdoll/bodyGlassesOrange",
+    "strSlotImage": "paperdoll/bodyGlassesBlank",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesA02",
+    "strSlotImage": "paperdoll/bodyGlassesA02",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesA03",
+    "strSlotImage": "paperdoll/bodyGlassesA03",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesA04",
+    "strSlotImage": "paperdoll/bodyGlassesA04",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesA05",
+    "strSlotImage": "paperdoll/bodyGlassesA05",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesA06",
+    "strSlotImage": "paperdoll/bodyGlassesA06",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesB02",
+    "strSlotImage": "paperdoll/bodyGlassesB02",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesB03",
+    "strSlotImage": "paperdoll/bodyGlassesB03",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesB04",
+    "strSlotImage": "paperdoll/bodyGlassesB04",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesB05",
+    "strSlotImage": "paperdoll/bodyGlassesB05",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesB06",
+    "strSlotImage": "paperdoll/bodyGlassesB06",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesC02",
+    "strSlotImage": "paperdoll/bodyGlassesC02",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesC03",
+    "strSlotImage": "paperdoll/bodyGlassesC03",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesC04",
+    "strSlotImage": "paperdoll/bodyGlassesC04",
+    "strSlotImageUnder": null,
+    "strIASlot": null,
+    "strIAUnslot": null,
+    "strIASlotParents": null,
+    "strIAUnslotParents": null,
+    "mapMeshTextures": []
+  },
+  {
+    "strName": "BodyGlassesC05",
+    "strSlotImage": "paperdoll/bodyGlassesC05",
     "strSlotImageUnder": null,
     "strIASlot": null,
     "strIAUnslot": null,

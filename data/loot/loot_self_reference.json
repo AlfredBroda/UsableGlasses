@@ -1,0 +1,100 @@
+[
+  {
+    "strName": "ItmItmGlassesA02",
+    "aCOs": [
+      "ItmGlassesA02=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesA03",
+    "aCOs": [
+      "ItmGlassesA03=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesA04",
+    "aCOs": [
+      "ItmGlassesA04=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesA05",
+    "aCOs": [
+      "ItmGlassesA05=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesA06",
+    "aCOs": [
+      "ItmGlassesA06=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesB02",
+    "aCOs": [
+      "ItmGlassesB02=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesB03",
+    "aCOs": [
+      "ItmGlassesB03=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesB04",
+    "aCOs": [
+      "ItmGlassesB04=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesB05",
+    "aCOs": [
+      "ItmGlassesB05=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesB06",
+    "aCOs": [
+      "ItmGlassesB06=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesC02",
+    "aCOs": [
+      "ItmGlassesC02=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesC03",
+    "aCOs": [
+      "ItmGlassesC03=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesC04",
+    "aCOs": [
+      "ItmGlassesC04=1.0x1"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmItmGlassesC05",
+    "aCOs": [
+      "ItmGlassesC05=1.0x1"
+    ],
+    "strType": "item"
+  }
+]

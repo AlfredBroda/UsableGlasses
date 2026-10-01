@@ -1,18 +1,282 @@
 [
-    {
-        "strName" : "ItmGlassesA",
-        "strNameFriendly" : "Glasses, design A",
-        "strImg"  : "ItmBodyPart01",
-        "strImgNorm"  : "ItmBodyPart01",
-        "strPortraitImg"  : "paperdoll/portGlassesOrange",
-        "strCOBase"    : "ItmGlassesOrange",
-        "strCondLoot"    : null,
-        "mapSlotEffects" : [
-            "head_glasses","BodyGlassesA",
-            "heldL", "HeldItmDefaultSoftL",
-            "heldR", "HeldItmDefaultSoftR"
-        ],
-        "mapModeSwitches"    : [
-        ]
-    }
+  {
+    "strName": "ItmGlassesA02",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern A02 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:A02",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesA02",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesA02",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesA02"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesA03",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern A03 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:A03",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesA03",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesA03",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesA03"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesA04",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern A04 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:A04",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesA04",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesA04",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesA04"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesA05",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern A05 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:A05",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesA05",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesA05",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesA05"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesA06",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern A06 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:A06",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesA06",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesA06",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesA06"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesB02",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern B02 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:B02",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesB02",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesB02",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesB02"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesB03",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern B03 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:B03",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesB03",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesB03",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesB03"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesB04",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern B04 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:B04",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesB04",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesB04",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesB04"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesB05",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern B05 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:B05",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesB05",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesB05",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesB05"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesB06",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern B06 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:B06",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesB06",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesB06",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesB06"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesC02",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern C02 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:C02",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesC02",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesC02",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesC02"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesC03",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern C03 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:C03",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesC03",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesC03",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesC03"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesC04",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern C04 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:C04",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesC04",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesC04",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesC04"
+    ],
+    "mapModeSwitches": []
+  },
+  {
+    "strName": "ItmGlassesC05",
+    "strNameShort": " Glasses",
+    "strDesc": "Glasses pattern C05 - minimum protection when staring at the sun.",
+    "strNameFriendly": "Glasses:C05",
+    "strCOBase": "ItmGlassesOrange",
+    "strImg": "items/ItmGlassesC05",
+    "strImgNorm": "items/ItmGlassesN",
+    "strPortraitImg": "paperdoll/portGlassesC05",
+    "strCondLoot": "CNDOLGlasses",
+    "mapSlotEffects": [
+      "heldL",
+      "HeldItmDefaultL",
+      "heldR",
+      "HeldItmDefaultR",
+      "head_glasses",
+      "BodyGlassesC05"
+    ],
+    "mapModeSwitches": []
+  }
 ]

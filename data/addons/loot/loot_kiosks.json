@@ -1,0 +1,16 @@
+[
+  {
+    "strName": "ItmTraderSanDiegoClothesInv",
+    "aLoots": [
+        "RandomGlasses=1.0x5-15"
+    ],
+    "strType": "item"
+  },
+  {
+    "strName": "ItmSupplyKioskInv",
+    "aLoots": [
+        "RandomGlasses=1.0x1-3"
+    ],
+    "strType": "item"
+  }
+]
