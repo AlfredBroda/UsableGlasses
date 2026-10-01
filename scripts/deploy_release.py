@@ -14,12 +14,11 @@ from pathlib import Path
 
 PROJECT_NAME = "UsableGlasses"
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-PROJECT_FILE = PROJECT_ROOT / "UsableGlasses.csproj"
-DEFAULT_SOURCE = PROJECT_ROOT / "bin" / "Release" / "UsableGlasses.dll"
+PROJECT_FILE = PROJECT_ROOT / f"{PROJECT_NAME}.csproj"
+DEFAULT_SOURCE = PROJECT_ROOT / "bin" / "Release" / f"{PROJECT_NAME}.dll"
 DEFAULT_PROPS = PROJECT_ROOT / "Config.Build.user.props"
 DEFAULT_METADATA = PROJECT_ROOT / "mod_info.json"
 DEFAULT_PREVIEW = PROJECT_ROOT / "images" / "preview.png"
-
 
 def read_property(props_path: Path, property_name: str) -> str:
     try:
