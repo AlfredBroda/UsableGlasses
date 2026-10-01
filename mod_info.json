@@ -5,7 +5,7 @@
     "strAuthor" : "Frederoo",
     "strModURL" : "https://github.com/AlfredBroda/UsableGlasses",
     "strGameVersion" : "1.0.1.5",
-    "strModVersion"  : "0.1.0",
+    "strModVersion"  : "0.2.0",
     "strNotes"       : "A BepInEx plugin for Ostranauts that allows using glasses as an item in the game.",
     "strWorkshopID"  : "3811398342",
     "aDependencies"  : [
