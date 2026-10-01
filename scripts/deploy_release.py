@@ -17,6 +17,7 @@ PROJECT_FILE = PROJECT_ROOT / "UsableGlasses.csproj"
 DEFAULT_SOURCE = PROJECT_ROOT / "bin" / "Release" / "UsableGlasses.dll"
 DEFAULT_PROPS = PROJECT_ROOT / "Config.Build.user.props"
 DEFAULT_METADATA = PROJECT_ROOT / "mod_info.json"
+DEFAULT_PREVIEW = PROJECT_ROOT / "images" / "preview.png"
 
 
 def read_property(props_path: Path, property_name: str) -> str:
@@ -59,10 +60,101 @@ def build_release() -> None:
         raise RuntimeError(f"Release build failed with exit code {error.returncode}") from error
 
 
+def latest_release_tag() -> str | None:
+    try:
+        result = subprocess.run(
+            ["git", "describe", "--tags", "--abbrev=0"],
+            cwd=PROJECT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError("git was not found on PATH") from error
+    except subprocess.CalledProcessError as error:
+        try:
+            tags = subprocess.run(
+                ["git", "tag", "--list"],
+                cwd=PROJECT_ROOT,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except (FileNotFoundError, subprocess.CalledProcessError) as tag_error:
+            raise RuntimeError(f"Could not list release tags: {tag_error}") from tag_error
+
+        if not tags.stdout.strip():
+            return None
+        raise RuntimeError(
+            f"Could not determine latest reachable release tag: {error.stderr.strip()}"
+        ) from error
+
+    version = result.stdout.strip()
+    if not version:
+        raise RuntimeError("git describe returned an empty release tag")
+    return version
+
+
+def ensure_release_tag(version: str, dry_run: bool) -> str:
+    try:
+        result = subprocess.run(
+            ["git", "tag", "--list", version],
+            cwd=PROJECT_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError("git was not found on PATH") from error
+    except subprocess.CalledProcessError as error:
+        raise RuntimeError(f"Could not check release tag {version}: {error}") from error
+
+    if version in result.stdout.splitlines():
+        print(f"Using existing release tag {version}")
+        return version
+
+    if dry_run:
+        print(f"Would create release tag {version}")
+        return version
+
+    try:
+        subprocess.run(["git", "tag", version], cwd=PROJECT_ROOT, check=True)
+    except (FileNotFoundError, subprocess.CalledProcessError) as error:
+        raise RuntimeError(f"Could not create release tag {version}: {error}") from error
+
+    print(f"Created release tag {version}")
+    return version
+
+
+def update_metadata_version(metadata_path: Path, version: str) -> None:
+    try:
+        with metadata_path.open(encoding="utf-8") as metadata_file:
+            metadata = json.load(metadata_file)
+    except (OSError, json.JSONDecodeError) as error:
+        raise RuntimeError(f"Could not read metadata {metadata_path}: {error}") from error
+
+    if not isinstance(metadata, list) or not metadata or not isinstance(metadata[0], dict):
+        raise RuntimeError(f"Metadata must be a non-empty JSON array of objects: {metadata_path}")
+
+    if metadata[0].get("strModVersion") == version:
+        return
+
+    metadata[0]["strModVersion"] = version
+    try:
+        with metadata_path.open("w", encoding="utf-8") as metadata_file:
+            json.dump(metadata, metadata_file, indent=2)
+            metadata_file.write("\n")
+    except OSError as error:
+        raise RuntimeError(f"Could not update metadata {metadata_path}: {error}") from error
+
+    print(f"Updated strModVersion to {version} in {metadata_path}")
+
+
 def deploy(
     source: Path,
     props_path: Path,
     metadata_path: Path,
+    preview_path: Path,
     dry_run: bool,
 ) -> Path:
     if not source.is_file():
@@ -73,11 +165,10 @@ def deploy(
     if not metadata_path.is_file():
         raise RuntimeError(f"Metadata file not found: {metadata_path}")
     validate_metadata(metadata_path)
-    source_images_dir = PROJECT_ROOT / "images"
-    if not (source_images_dir / "preview.png").is_file():
+    if not preview_path.is_file():
         raise RuntimeError(
-            f"Preview image not found: {source_images_dir / 'preview.png'}\n"
-            "Add images/preview.png to the project."
+            f"Preview image not found: {preview_path}\n"
+            "Add images/preview.png to the project or pass --preview <path>."
         )
 
     bepinex_dir = Path(read_property(props_path, "BepInExDir"))
@@ -85,21 +176,16 @@ def deploy(
         raise RuntimeError(f"BepInExDir does not exist: {bepinex_dir}")
 
     game_dir = bepinex_dir.parent.parent
-    package_dir = game_dir / "Ostranauts_Data" / "Mods" / "UsableGlasses"
+    package_dir = game_dir / "Ostranauts_Data" / "Mods" / "DataAddonMerge"
     plugins_dir = package_dir / "plugins"
-    source_data_dir = PROJECT_ROOT / "data"
+    data_dir = package_dir / "data"
     destination = plugins_dir / source.name
 
     if dry_run:
         print(f"Would create package: {package_dir}")
         print(f"Would copy {metadata_path.name} -> {package_dir / 'mod_info.json'}")
+        print(f"Would copy {preview_path.name} -> {package_dir / 'preview.png'}")
         print(f"Would copy {source.name} -> {destination}")
-        print(f"Would copy {source_data_dir} -> {package_dir / 'data'}")
-        print(f"Would copy {source_images_dir} -> {package_dir / 'images'}")
-        print(
-            f"Would move {package_dir / 'images' / 'preview.png'} -> "
-            f"{package_dir / 'preview.png'}"
-        )
         return package_dir
 
     if package_dir.exists():
@@ -107,14 +193,32 @@ def deploy(
         shutil.rmtree(package_dir)
 
     plugins_dir.mkdir(parents=True, exist_ok=True)
+    data_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(metadata_path, package_dir / "mod_info.json")
+    shutil.copy2(preview_path, package_dir / "preview.png")
     shutil.copy2(source, destination)
-    shutil.copytree(source_data_dir, package_dir / "data", dirs_exist_ok=True)
-    images_dir = package_dir / "images"
-    shutil.copytree(source_images_dir, images_dir, dirs_exist_ok=True)
-    shutil.move(str(images_dir / "preview.png"), str(package_dir / "preview.png"))
     print(f"Created Workshop package at {package_dir}")
     return package_dir
+
+def build_package(package_dir: Path, version: str) -> Path:
+    if not package_dir.is_dir():
+        raise RuntimeError(f"Workshop package directory not found: {package_dir}")
+
+    archive_path = PROJECT_ROOT / "bin" / "Release" / f"{package_dir.name}-v{version}.zip"
+    archive_path.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        shutil.make_archive(
+            str(archive_path.with_suffix("")),
+            "zip",
+            root_dir=package_dir.parent,
+            base_dir=package_dir.name,
+        )
+    except (OSError, shutil.Error) as error:
+        raise RuntimeError(f"Could not create release archive {archive_path}: {error}") from error
+
+    print(f"Created release archive at {archive_path}")
+    return archive_path
 
 
 def main() -> int:
@@ -123,7 +227,7 @@ def main() -> int:
         "--source",
         type=Path,
         default=DEFAULT_SOURCE,
-        help="Release DLL to deploy (default: bin/Release/net48/UsableGlasses.dll)",
+        help="Release DLL to deploy (default: bin/Release/net48/DataAddonMerge.dll)",
     )
     parser.add_argument(
         "--props",
@@ -136,6 +240,12 @@ def main() -> int:
         type=Path,
         default=DEFAULT_METADATA,
         help="Metadata source copied as mod_info.json (default: mod_info.json)",
+    )
+    parser.add_argument(
+        "--preview",
+        type=Path,
+        default=DEFAULT_PREVIEW,
+        help="Workshop preview image copied as preview.png (default: preview.png)",
     )
     parser.add_argument(
         "--dry-run",
@@ -152,12 +262,29 @@ def main() -> int:
     try:
         if not arguments.no_build:
             build_release()
-        deploy(
+        version = latest_release_tag()
+        if version is None:
+            version = ensure_release_tag(
+                read_property(PROJECT_FILE, "Version"), arguments.dry_run
+            )
+        else:
+            print(f"Using latest reachable release tag {version}")
+        if not arguments.dry_run:
+            update_metadata_version(arguments.metadata.resolve(), version)
+
+        package_dir = deploy(
             arguments.source.resolve(),
             arguments.props.resolve(),
             arguments.metadata.resolve(),
+            arguments.preview.resolve(),
             arguments.dry_run,
         )
+        if arguments.dry_run:
+            archive_path = PROJECT_ROOT / "bin" / "Release" / f"{package_dir.name}-v{version}.zip"
+            print(f"Would create release archive at {archive_path}")
+        else:
+            build_package(package_dir, version)
+
     except RuntimeError as error:
         print(f"Error: {error}", file=sys.stderr)
         return 1
