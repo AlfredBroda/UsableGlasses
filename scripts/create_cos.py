@@ -123,11 +123,7 @@ def generate_overlay_json(target_folders: str, output_cooverlays: str, output_sl
                     item_kind=kind,
                     pattern=pattern_label
                 ).strip()
-                if colour in pattern_label:
-                    friendly_name = friendly_name.replace(f" {colour}", "").rstrip()
-                elif friendly_name.endswith(f" {colour}") and pattern_label.lower() == "plain":
-                    friendly_name = friendly_name.replace(f" {colour}", "")
-                    friendly_name = friendly_name.rstrip()
+
                 desc = ref["strDescTemplate"].format(
                     colour=colour,
                     colour_lower=colour.lower(),
@@ -173,7 +169,7 @@ def generate_overlay_json(target_folders: str, output_cooverlays: str, output_sl
 
                 # create loot reference for each item, with a 1.0x1 chance of dropping
                 new_loot = {
-                    "strName": f"Itm{item_name}",
+                    "strName": f"{item_name}",
                     "aCOs": [f"{item_name}=1.0x1"],
                     "strType": "item"
                 }
@@ -184,7 +180,7 @@ def generate_overlay_json(target_folders: str, output_cooverlays: str, output_sl
         return
 
     safely_write_json(output_cooverlays, all_overlays, preserve)
-    safely_write_json(output_slots, all_slots, True) # there is a base CO slot_effect there
+    safely_write_json(output_slots, all_slots, preserve) # there is a base CO slot_effect there
     safely_write_json(output_loot, loot, preserve)
 
 if __name__ == "__main__":
@@ -197,6 +193,6 @@ if __name__ == "__main__":
 
     loot_files = "data/loot/loot_self_reference.json"
 
-    generate_overlay_json(args.dir, "data/cooverlays/cooverlays_glasses.json", "data/slot_effects/slot_effects_glasses.json", loot_files, preserve=False)
+    generate_overlay_json(args.dir, "data/cooverlays/cooverlays_glasses.json", "data/slot_effects/slot_effects_glasses.json", loot_files, preserve=True)
 
     generate_collections(glob.glob(loot_files), "data/loot/loot_glasses.json")

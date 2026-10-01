@@ -2,7 +2,7 @@
   {
     "strName": "ItmGlassesOrange",
     "strNameShort": "Glasses C05",
-    "strItemDef": "ItmGlassesC05",
+    "strItemDef": "ItmGlassesOrange",
     "strDesc": "Orange Glasses - minimum protection when staring at the sun.",
     "strNameFriendly": "Glasses, Orange C05",
     "strType": "Item",

@@ -1,8 +1,8 @@
 [
     {
-        "strName": "ItmGlassesC05",
-        "strImg"  : "items/ItmGlassesC05",
-        "strImgNorm"  : "items/ItmGlassesC05N",
+        "strName": "ItmGlassesOrange",
+        "strImg"  : "items/ItmGlassesOrange",
+        "strImgNorm"  : "items/ItmGlassesOrangeN",
         "strImgDamaged" : "",
         "strDmgColor" : "DamageTintDefault",
         "fZScale"  : 0.02,

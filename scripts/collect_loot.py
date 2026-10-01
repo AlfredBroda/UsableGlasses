@@ -39,7 +39,7 @@ def loot_string(loot_list: list[str]) -> str:
     if not unique_loot:
         return ""
 
-    chance = round(0.95 / len(unique_loot), 2)
+    chance = round(1.0 / len(unique_loot), 2)
     loot_collected: list[str] = []
     for loot_name in unique_loot:
         loot_collected.append(f"{loot_name}={chance}x1")
@@ -54,6 +54,8 @@ def generate_collections(loot_origin: list[str], loot_stash: str) -> None:
     loot_collected: list[str] = []
     for file in origin_files:
         loot_collected.extend(extract_str_names(file))
+
+    print(f"Collected {len(loot_collected)} loot items from {len(origin_files)} files")
 
     # Iterate through all loot items
     glasses = unique_in_order(filter_list(loot_collected, "Glasses"))
@@ -71,7 +73,7 @@ def generate_collections(loot_origin: list[str], loot_stash: str) -> None:
         "strType": "item"
     }]
 
-    safely_write_json(loot_stash, out, True)
+    safely_write_json(loot_stash, out, False)
 
 if __name__ == "__main__":
     loot_files = [

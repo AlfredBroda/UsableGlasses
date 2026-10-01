@@ -66,7 +66,7 @@ internal class GlassesHelper
     private static string _noGlasses = "pbaseGlassesA01";
     public static void AddGlasses(CondOwner coUs, CondOwner coSlotted)
     {
-        if (coUs.Crew != null && !coUs.IsRobot)
+        if (coUs != null && coUs.Crew != null && !coUs.IsRobot)
         {
             // Texture2D texture2D = FaceAnim2.GetPNG(coSlotted);
             Plugin.Log.LogInfo($"Adding glasses for '{coUs.strName}' ('{coSlotted.strName}': '{coSlotted.strPortraitImg}')...");
@@ -83,6 +83,7 @@ internal class GlassesHelper
             if (portImage.StartsWith("paperdoll/") && portImage.LastIndexOf("/") <= "paperdoll/".Length)
             {
                 portImage = portImage.Substring("paperdoll/".Length);
+                portImage = portImage.Replace("port", "pbase"); // Needed for vanilla compatibility
                 coUs.Crew.FaceParts[1] = portImage;
             } else {
                 Plugin.Log.LogWarning($"AddGlasses('{coUs.strName}') Portrait image '{coSlotted.strPortraitImg}' needs to be located directly in both 'paperdoll/' and have a 'portrait/' counterpart to be used for glasses. Not adding glasses.");
@@ -93,6 +94,8 @@ internal class GlassesHelper
 
     public static void RemoveGlasses(CondOwner coUs)
     {
+        if (coUs == null || coUs.Crew == null || coUs.IsRobot) return;
+
         Plugin.Log.LogInfo($"Removing glasses for '{coUs.strName}'");
         Plugin.Log.LogDebug($"RemoveGlasses('{coUs.strName}') Face parts: {string.Join(", ", coUs.Crew.aFaceParts)}...");
 
