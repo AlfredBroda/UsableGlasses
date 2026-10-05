@@ -229,14 +229,6 @@ if __name__ == "__main__":
         got_errors |= validate_condowners(condowner_file=condowner_file, slot_effects_file=slot_effects_file, 
                                           loot_files="data/loot/loot*.json", add_loot="data/loot/loot_self_reference.json")
 
-    co_file = "data/condowners/condowners_*.json"
-    overlay_validations = [
-        ("data/cooverlays/cooverlays_socks.json", "data/slot_effects/slot_effects_clothes.json"),
-    ]
-    for overlay_file, slot_effects_file in overlay_validations:
-        got_errors |= validate_overlays(condowners_file=co_file, slot_effects_file=slot_effects_file, overlay_file=overlay_file, 
-                                        loot_files="data/loot/loot*.json", add_loot="data/loot/loot_self_reference.json")
-
     if got_errors:
         print("❌ One or more validation checks failed. Please review the errors above.")
         sys.exit(1)

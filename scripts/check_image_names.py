@@ -68,7 +68,22 @@ def missing_image_check(ref_field, image_file_list, json_files, suffixes=[""], f
                 match_count += 1
             else:
                 print(f" ❌ Not found {ref_field}: {to_match}")
-                skip_count += 1
+                if ref_field == "strPortraitImg":
+                    p_name = replace_prefix(to_match, "port", "body")
+                    prospect = Path(base_dir/"images"/f"{p_name}.png")
+                    exists = prospect.exists()
+                    print(f"  crop candidate: {prospect}\n  exists: {exists}")
+                    if exists:
+                        dest = Path(base_dir/"images"/f"{to_match}.png")
+                        done = auto_crop_image(prospect, dest)
+                        if done:
+                            crops += 1
+                        else:
+                            skip_count += 1
+                    else:
+                        skip_count += 1
+                else:
+                    skip_count += 1
 
     print(f"Matched: {match_count}/{checked_count} from {len(image_data)} base references | Missing: {skip_count}, Generated: {crops} files\n")
     if skip_count == 0:
@@ -112,7 +127,8 @@ if __name__ == "__main__":
 
     # Addon image list
     image_file_list = scan_images(base_dir, base_dir/"images")
-    image_file_list.extend(scan_images(".", Path("./images")))
+    for i, image_path in enumerate(image_file_list):
+        print(f"Image {i+1}/{len(image_file_list)}: {image_path}")
 
     print(f"\nChecking {base_dir.name} cooverlays references...")
     # Port images, displayed in the MTT on the right

@@ -1,12 +1,12 @@
 [
   {
     "strName": "ItmGlassesA02",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Fine dark frames with small, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: A02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA02",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesA02N",
     "strPortraitImg": "paperdoll/portGlassesA02",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -21,12 +21,12 @@
   },
   {
     "strName": "ItmGlassesA03",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Bold black frames with broad, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: A03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA03",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesA03N",
     "strPortraitImg": "paperdoll/portGlassesA03",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -41,12 +41,12 @@
   },
   {
     "strName": "ItmGlassesA04",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Dark brown frames with smoky, rounded lenses.",
     "strNameFriendly": "Glasses: A04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA04",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesA04N",
     "strPortraitImg": "paperdoll/portGlassesA04",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -61,12 +61,12 @@
   },
   {
     "strName": "ItmGlassesA05",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Slim amber-tinted lenses with softly upswept outer corners.",
     "strNameFriendly": "Glasses: A05",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA05",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesA05N",
     "strPortraitImg": "paperdoll/portGlassesA05",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -81,12 +81,12 @@
   },
   {
     "strName": "ItmGlassesA06",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Black rectangular frames with clear lenses.",
     "strNameFriendly": "Glasses: A06",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesA06",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesA06N",
     "strPortraitImg": "paperdoll/portGlassesA06",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -101,12 +101,12 @@
   },
   {
     "strName": "ItmGlassesB02",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Thin black round frames with pale lenses.",
     "strNameFriendly": "Glasses: B02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB02",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesB02N",
     "strPortraitImg": "paperdoll/portGlassesB02",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -121,12 +121,12 @@
   },
   {
     "strName": "ItmGlassesB03",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Blue rectangular frames with pale lenses.",
     "strNameFriendly": "Glasses: B03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB03",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesB03N",
     "strPortraitImg": "paperdoll/portGlassesB03",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -141,12 +141,12 @@
   },
   {
     "strName": "ItmGlassesB04",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Thick black frames with broad, lightly tinted lenses.",
     "strNameFriendly": "Glasses: B04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB04",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesB04N",
     "strPortraitImg": "paperdoll/portGlassesB04",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -161,12 +161,12 @@
   },
   {
     "strName": "ItmGlassesB05",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Slim black frames with narrow rectangular lenses.",
     "strNameFriendly": "Glasses: B05",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB05",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesB05N",
     "strPortraitImg": "paperdoll/portGlassesB05",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -181,12 +181,12 @@
   },
   {
     "strName": "ItmGlassesB06",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Bright blue novelty frames with oversized circular lenses and curling accents.",
     "strNameFriendly": "Glasses: B06",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesB06",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesB06N",
     "strPortraitImg": "paperdoll/portGlassesB06",
     "strCondLoot": "CNDOLGlassesNovelty",
     "mapSlotEffects": [
@@ -201,12 +201,12 @@
   },
   {
     "strName": "ItmGlassesC02",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Pale translucent frames with broad, rounded rectangular lenses.",
     "strNameFriendly": "Glasses: C02",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC02",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesC02N",
     "strPortraitImg": "paperdoll/portGlassesC02",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -221,12 +221,12 @@
   },
   {
     "strName": "ItmGlassesC03",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Black wraparound frames with dark tinted lenses.",
     "strNameFriendly": "Glasses: C03",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC03",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesC03N",
     "strPortraitImg": "paperdoll/portGlassesC03",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -241,12 +241,12 @@
   },
   {
     "strName": "ItmGlassesC04",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Bold black frames with large square lenses.",
     "strNameFriendly": "Glasses: C04",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC04",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesC04N",
     "strPortraitImg": "paperdoll/portGlassesC04",
     "strCondLoot": "CNDOLGlasses",
     "mapSlotEffects": [
@@ -261,12 +261,12 @@
   },
   {
     "strName": "ItmGlassesC05",
-    "strNameShort": " Glasses",
+    "strNameShort": "Glasses",
     "strDesc": "Orange wraparound visor with a grid of white illuminated dots.",
     "strNameFriendly": "Glasses: C05 (On)",
     "strCOBase": "ItmGlassesOrange",
     "strImg": "items/ItmGlassesC05",
-    "strImgNorm": "items/ItmGlassesN",
+    "strImgNorm": "items/ItmGlassesOrangeN",
     "strPortraitImg": "paperdoll/portGlassesC05",
     "strCondLoot": "CNDOLGlassesOrange",
     "mapSlotEffects": [
