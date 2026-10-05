@@ -18,6 +18,7 @@ PROJECT_FILE = PROJECT_ROOT / f"{PROJECT_NAME}.csproj"
 DEFAULT_SOURCE = PROJECT_ROOT / "bin" / "Release" / f"{PROJECT_NAME}.dll"
 DEFAULT_PROPS = PROJECT_ROOT / "Config.Build.user.props"
 DEFAULT_METADATA = PROJECT_ROOT / "mod_info.json"
+DEFAULT_DATA = PROJECT_ROOT / "data"
 DEFAULT_PREVIEW = PROJECT_ROOT / "images" / "preview.png"
 
 def read_property(props_path: Path, property_name: str) -> str:
@@ -154,6 +155,7 @@ def deploy(
     source: Path,
     props_path: Path,
     metadata_path: Path,
+    data_path: Path,
     preview_path: Path,
     dry_run: bool,
 ) -> Path:
@@ -185,6 +187,7 @@ def deploy(
         print(f"Would create package: {package_dir}")
         print(f"Would copy {metadata_path.name} -> {package_dir / 'mod_info.json'}")
         print(f"Would copy {preview_path.name} -> {package_dir / 'preview.png'}")
+        print(f"Would copy {data_path.name} -> {data_dir}")
         print(f"Would copy {source.name} -> {destination}")
         return package_dir
 
@@ -193,10 +196,11 @@ def deploy(
         shutil.rmtree(package_dir)
 
     plugins_dir.mkdir(parents=True, exist_ok=True)
-    data_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(metadata_path, package_dir / "mod_info.json")
     shutil.copy2(preview_path, package_dir / "preview.png")
     shutil.copy2(source, destination)
+    if data_path.exists():
+        shutil.copytree(data_path, data_dir, dirs_exist_ok=True)
     print(f"Created Workshop package at {package_dir}")
     return package_dir
 
@@ -242,6 +246,12 @@ def main() -> int:
         help="Metadata source copied as mod_info.json (default: mod_info.json)",
     )
     parser.add_argument(
+        "--data",
+        type=Path,
+        default=DEFAULT_DATA,
+        help="Data directory to include in the package (default: data)",
+    )
+    parser.add_argument(
         "--preview",
         type=Path,
         default=DEFAULT_PREVIEW,
@@ -276,6 +286,7 @@ def main() -> int:
             arguments.source.resolve(),
             arguments.props.resolve(),
             arguments.metadata.resolve(),
+            arguments.data.resolve(),
             arguments.preview.resolve(),
             arguments.dry_run,
         )
