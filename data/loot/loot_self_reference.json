@@ -96,5 +96,12 @@
       "ItmGlassesC05=1.0x1"
     ],
     "strType": "item"
+  },
+  {
+    "strName": "ItmGlassesOrange",
+    "aCOs": [
+      "ItmGlassesOrange=1.0x1"
+    ],
+    "strType": "item"
   }
 ]

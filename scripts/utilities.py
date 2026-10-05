@@ -191,10 +191,11 @@ def scan_images(base_dir, images_dir) -> list[str]:
 
     file_list = []
     image_files = images_dir.rglob("*.png")
+    print(f"Scanning for images in: {images_dir.resolve()}")
     for file_name in image_files:
         # Reconstruct the portrait image path using forward slashes, remove images prefix
         # e.g., 'paperdoll/bodyNewSkinPubes/NewSkinPubesB'
-        path = f"{file_name}".replace(f"{base_dir}/images/", '').replace('.png', '')
+        path = f"{file_name}".replace(f"{base_dir}/images", '').replace('images/', '').replace('.png', '')
         file_list.append(path)
     
     print(f"Found {len(file_list)} image files in '{images_dir}'")
