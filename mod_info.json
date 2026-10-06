@@ -8,7 +8,8 @@
     "strNotes": "A BepInEx plugin for Ostranauts that allows using glasses as an item in the game.",
     "strWorkshopID": "3811398342",
     "aDependencies": [
-      "3786272967"
+      "3786272967",
+      "3741030124"
     ]
   }
 ]
