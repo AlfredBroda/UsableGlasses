@@ -19,6 +19,7 @@ DEFAULT_SOURCE = PROJECT_ROOT / "bin" / "Release" / f"{PROJECT_NAME}.dll"
 DEFAULT_PROPS = PROJECT_ROOT / "Config.Build.user.props"
 DEFAULT_METADATA = PROJECT_ROOT / "mod_info.json"
 DEFAULT_DATA = PROJECT_ROOT / "data"
+DEFAULT_IMAGES = PROJECT_ROOT / "images"
 DEFAULT_PREVIEW = PROJECT_ROOT / "images" / "preview.png"
 
 def read_property(props_path: Path, property_name: str) -> str:
@@ -156,6 +157,7 @@ def deploy(
     props_path: Path,
     metadata_path: Path,
     data_path: Path,
+    image_path: Path,
     preview_path: Path,
     dry_run: bool,
 ) -> Path:
@@ -179,8 +181,9 @@ def deploy(
 
     game_dir = bepinex_dir.parent.parent
     package_dir = game_dir / "Ostranauts_Data" / "Mods" / PROJECT_NAME
-    plugins_dir = package_dir / "plugins"
+    plugins_dir = package_dir / "BepInEx" / "plugins"
     data_dir = package_dir / "data"
+    images_dir = package_dir / "images"
     destination = plugins_dir / source.name
 
     if dry_run:
@@ -188,6 +191,7 @@ def deploy(
         print(f"Would copy {metadata_path.name} -> {package_dir / 'mod_info.json'}")
         print(f"Would copy {preview_path.name} -> {package_dir / 'preview.png'}")
         print(f"Would copy {data_path.name} -> {data_dir}")
+        print(f"Would copy {image_path.name} -> {images_dir}")
         print(f"Would copy {source.name} -> {destination}")
         return package_dir
 
@@ -201,6 +205,8 @@ def deploy(
     shutil.copy2(source, destination)
     if data_path.exists():
         shutil.copytree(data_path, data_dir, dirs_exist_ok=True)
+    if image_path.exists():
+        shutil.copytree(image_path, images_dir, dirs_exist_ok=True)
     print(f"Created Workshop package at {package_dir}")
     return package_dir
 
@@ -252,6 +258,12 @@ def main() -> int:
         help="Data directory to include in the package (default: data)",
     )
     parser.add_argument(
+        "--images",
+        type=Path,
+        default=DEFAULT_IMAGES,
+        help="Images directory to include in the package (default: images)",
+    )
+    parser.add_argument(
         "--preview",
         type=Path,
         default=DEFAULT_PREVIEW,
@@ -287,6 +299,7 @@ def main() -> int:
             arguments.props.resolve(),
             arguments.metadata.resolve(),
             arguments.data.resolve(),
+            arguments.images.resolve(),
             arguments.preview.resolve(),
             arguments.dry_run,
         )
