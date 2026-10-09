@@ -17,14 +17,14 @@
       "IsBurnable=1.0x1.0",
       "IsSolid=1.0x1.0",
       "StatMass=1.0x0.1",
-      "StatBasePrice=1.0x10.0",
       "IsPocketable=1.0x1.0",
       "IsClippable=1.0x1.0",
       "IsBrittle=1.0x1.0",
       "StatDamageMax=1.0x2",
       "StatArmorBlunt=1.0x0.2",
       "StatArmorCut=1.0x0.2",
-      "IsNewSkin=1.0x1"
+      "IsRenbao=1.0x1",
+      "StatBasePrice=1.0x25.0"
     ],
     "aSlotsWeHave": [],
     "dictSlotsLayout": null,
@@ -38,7 +38,6 @@
     "mapCondTolerance": [],
     "mapPoints": [],
     "mapGUIPropMaps": null,
-    "strCondLoot": "CNDOLGlassesOrange",
     "strPortraitImg": "paperdoll/portGlassesOrange",
     "strAudioEmitter": "ItmSmallPlasticGeneralSound",
     "mapSlotEffects": [
